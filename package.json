@@ -1,0 +1,31 @@
+{
+  "name": "@granite-elements/granite-lit-spectre",
+  "description": "Wrapping of *Spectre CSS* as a LitElement HTML TemplateResult to be used in LitElement web components",
+  "main": "granite-lit-spectre-min.js",
+  "author": "Horacio Gonzalez <horacio.gonzalez@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lostinbrittany/granite-lit-spectre.git"
+  },
+  "homepage": "https://github.com/lostinbrittany/granite-lit-spectre",
+  "dependencies": {
+    "@polymer/lit-element": "^0.6.4",
+    "spectre.css": "^0.5.7"
+  },
+  "scripts": {
+    "prepare": "node ./scripts/granite-css-modularizer.js ./node_modules/spectre.css/dist ."
+  },
+  "version": "0.5.7-0",
+  "devDependencies": {
+    "@polymer/polymer": "^3.0.0",
+    "@polymer/iron-component-page": "^3.0.0-pre.20",
+    "@polymer/iron-demo-helpers": "^3.0.0",
+    "@polymer/iron-icon": "^3.0.0",
+    "@polymer/iron-icons": "^3.0.0",
+    "@polymer/iron-test-helpers": "^3.0.0",
+    "@polymer/test-fixture": "^3.0.0-pre.20",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "fs-extra": "^7.0.1",
+    "klaw": "^3.0.0"
+  }
+}
