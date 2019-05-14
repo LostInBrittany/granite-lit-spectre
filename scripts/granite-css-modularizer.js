@@ -45,15 +45,15 @@ if (process.argv.length != 4) {
   @demo demo/index.html
 */
 
-import { html } from '@polymer/lit-element';
+import { css } from 'lit-element';
 
-const styles = html\`
-<style>\n`;
+const styles = css\`
+`;
   }
 
   function getFooter() { 
     return `
-</style>
+
 \`;
 export default styles;\n`;
   }

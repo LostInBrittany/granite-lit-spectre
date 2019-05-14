@@ -1,8 +1,7 @@
 ## granite-lit-spectre
 
-*granite-lit-spectre* is a wrapping of [Spectre CSS](https://picturepan2.github.io/spectre/) CSS as [LitElement](https://lit-element.polymer-project.org/) [lit-html TemplateResult](https://lit-element.polymer-project.org/docs/templates/create) to be used in LitElement web components.
+*granite-lit-spectre* is a wrapping of [Spectre CSS](https://picturepan2.github.io/spectre/) CSS as [LitElement](https://lit-element.polymer-project.org/) [lit-html CSS TemplateResult](https://lit-element.polymer-project.org/guide/styles) to be used in LitElement web components.
 
-> Polymer 3.x. element
 
 
 ## Doc & demo
@@ -37,16 +36,17 @@ Supossing you want to import `granite-lit-spectre.js`:
 import spectreStyle from '@granite-elements/granite-lit-spectre/granite-lit-spectre.js';
 ``` 
 
-#### 3. Inside your component, use *granite-lit-spectre* as shared style
+#### 3. Inside your component, use *granite-lit-spectre* in the static `styles` property
 
-In your element's `render` function, use it in the returned `html` template literal:
 
 ```js
 
 class GraniteSpectreExample extends LitElement {
+  static get styles() {
+    return spectreStyle;
+  }
   render() {
     return html`
-      ${spectreStyle}
       <div class="label label-rounded label-primary">Styled text</div>
     `;
   }
@@ -60,9 +60,11 @@ import { html, LitElement } from '@polymer/lit-element';
 import spectreStyle from '../granite-spectre.js';
 
 class GraniteSpectreExample extends LitElement {
+  static get styles() {
+    return spectreStyle;
+  }
   render() {
     return html`
-      ${spectreStyle}
       <table class="table  table-hover">
           <tr><th>Surname</th><th>Name</th></tr>
           ${this.people.map( (person) => {
