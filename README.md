@@ -56,8 +56,8 @@ class GraniteSpectreExample extends LitElement {
 #### A complete example
 
 ```js
-import { html, LitElement } from '@polymer/lit-element';
-import spectreStyle from '../granite-spectre.js';
+import { html, LitElement } from 'lit-element';
+import spectreStyle from '../granite-lit-spectre.js';
 
 class GraniteSpectreExample extends LitElement {
   static get styles() {

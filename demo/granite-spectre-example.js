@@ -1,10 +1,12 @@
-import { html, LitElement } from '@polymer/lit-element';
-import spectreStyle from '../granite-spectre.js';
+import { html, LitElement } from 'lit-element';
+import spectreStyle from '../granite-lit-spectre.js';
 
 class GraniteSpectreExample extends LitElement {
+  static get styles() {
+    return spectreStyle;
+  }
   render() {
     return html`
-      ${spectreStyle}
       <table class="table  table-hover">
           <tr><th>Surname</th><th>Name</th></tr>
           ${this.people.map( (person) => {
