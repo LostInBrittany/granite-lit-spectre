@@ -89,7 +89,7 @@ const styles = css`
 }
 
 .calendar .calendar-header,
-.calendar .calendar-body {
+.calendar .calendar-:host {
   display: flex;
   display: -ms-flexbox;
   -ms-flex-pack: center;
@@ -114,7 +114,7 @@ const styles = css`
   text-align: center;
 }
 
-.calendar .calendar-body {
+.calendar .calendar-:host {
   color: #66758c;
 }
 
@@ -227,7 +227,7 @@ const styles = css`
   color: #5755d9;
 }
 
-.calendar.calendar-lg .calendar-body {
+.calendar.calendar-lg .calendar-:host {
   padding: 0;
 }
 
@@ -573,7 +573,7 @@ const styles = css`
   margin: .4rem 0;
 }
 
-.filter .filter-body {
+.filter .filter-:host {
   display: flex;
   display: -ms-flexbox;
   -ms-flex-wrap: wrap;

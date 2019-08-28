@@ -67,7 +67,11 @@ export default styles;\n`;
       
       fs.ensureDirSync(targetFolder);
       
-      let data = fs.readFileSync(item.path, "utf8").replace(/\\/g,'\\\\').replace(/`/g,'\'');
+      let data = fs.readFileSync(item.path, "utf8")
+          .replace(/\\/g,'\\\\')
+          .replace(/`/g,'\'')
+          .replace(/html {/g, ':host {')
+          .replace(/body {/g, ':host {');
       
       let out = getHeader() + data + getFooter(filename);
       

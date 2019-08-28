@@ -16,7 +16,7 @@
   "scripts": {
     "prepare": "node ./scripts/granite-css-modularizer.js ./node_modules/spectre.css/dist ."
   },
-  "version": "0.5.8-2",
+  "version": "0.5.8-3",
   "devDependencies": {
     "fs-extra": "^8.0.1",
     "klaw": "^3.0.0",

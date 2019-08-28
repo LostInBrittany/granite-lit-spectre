@@ -22,7 +22,7 @@ const styles = css`
 /* normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /** 1. Change the default font family in all browsers (opinionated). 2. Correct the line height in all browsers. 3. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
 /* Document ========================================================================== */
-html {
+:host {
   font-family: sans-serif; /* 1 */
   -webkit-text-size-adjust: 100%; /* 3 */ 
   -ms-text-size-adjust: 100%; /* 3 */
@@ -30,7 +30,7 @@ html {
 
 /* Sections ========================================================================== */
 /** Remove the margin in all browsers (opinionated). */
-body {
+:host {
   margin: 0;
 }
 
@@ -297,14 +297,14 @@ template {
   box-sizing: inherit;
 }
 
-html {
+:host {
   box-sizing: border-box;
   font-size: 20px;
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
 }
 
-body {
+:host {
   background: #fff;
   color: #3b4351;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
@@ -2018,7 +2018,7 @@ video.video-responsive::before {
   padding-top: 8rem;
 }
 
-.hero .hero-body {
+.hero .hero-:host {
   padding: .4rem;
 }
 
@@ -2067,7 +2067,7 @@ video.video-responsive::before {
 }
 
 .accordion input:checked ~ .accordion-body,
-.accordion[open] .accordion-body {
+.accordion[open] .accordion-:host {
   max-height: 50rem;
 }
 
@@ -2080,7 +2080,7 @@ video.video-responsive::before {
   transition: transform .25s;
 }
 
-.accordion .accordion-body {
+.accordion .accordion-:host {
   margin-bottom: .4rem;
   max-height: 0;
   overflow: hidden;
@@ -2356,7 +2356,7 @@ summary.accordion-header::-webkit-details-marker {
   padding-bottom: .8rem;
 }
 
-.card .card-body {
+.card .card-:host {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
@@ -2615,7 +2615,7 @@ summary.accordion-header::-webkit-details-marker {
   padding: .8rem;
 }
 
-.modal-container .modal-body {
+.modal-container .modal-:host {
   overflow-y: auto;
   padding: .8rem;
   position: relative;
@@ -2741,7 +2741,7 @@ summary.accordion-header::-webkit-details-marker {
   flex: 0 0 auto;
 }
 
-.panel .panel-body {
+.panel .panel-:host {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   overflow-y: auto;
