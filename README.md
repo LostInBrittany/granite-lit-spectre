@@ -114,11 +114,13 @@ customElements.define('granite-spectre-example', GraniteSpectreExample);
     ```
      npm install
     ```
-+   Run the Polymer development server from the root project directory:
+    
++   Run the [es-dev-server](https://open-wc.org/developing/es-dev-server.html) development server from the root project directory:
 
     ```
-    polymer serve --npm
+    npm run serve
     ```
+
 
 
 ## Note on semver versioning
