@@ -16,8 +16,8 @@
 
 import { css } from 'lit-element';
 
-const styles = css`
-/*! Spectre.css Icons v0.5.8 | MIT License | github.com/picturepan2/spectre */
+export const styles = css`
+/*! Spectre.css Icons v0.5.9 | MIT License | github.com/picturepan2/spectre */
 .icon {
   box-sizing: border-box;
   display: inline-block;
@@ -614,6 +614,4 @@ const styles = css`
   transform: translate(-50%, -40%) rotate(-135deg);
   width: .5em;
 }
-
 `;
-export default styles;

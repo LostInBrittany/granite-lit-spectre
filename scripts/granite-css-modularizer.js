@@ -47,15 +47,14 @@ if (process.argv.length != 4) {
 
 import { css } from 'lit-element';
 
-const styles = css\`
+export const styles = css\`
 `;
   }
 
   function getFooter() { 
     return `
-
 \`;
-export default styles;\n`;
+`;
   }
   
   let transformFile = function(item) {

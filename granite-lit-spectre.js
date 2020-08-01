@@ -16,8 +16,8 @@
 
 import { css } from 'lit-element';
 
-const styles = css`
-/*! Spectre.css v0.5.8 | MIT License | github.com/picturepan2/spectre */
+export const styles = css`
+/*! Spectre.css v0.5.9 | MIT License | github.com/picturepan2/spectre */
 /* Manually forked from Normalize.css */
 /* normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /** 1. Change the default font family in all browsers (opinionated). 2. Correct the line height in all browsers. 3. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
@@ -780,8 +780,8 @@ html:lang(ko),
 }
 
 .btn-group {
-  display: inline-flex;
   display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -815,8 +815,8 @@ html:lang(ko),
 }
 
 .btn-group.btn-group-block {
-  display: flex; 
   display: -ms-flexbox;
+  display: flex;
 }
 
 .btn-group.btn-group-block .btn {
@@ -878,10 +878,6 @@ legend {
 .form-input:focus {
   border-color: #5755d9; 
   box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
-}
-
-.form-input::-webkit-input-placeholder {
-  color: #bcc3ce;
 }
 
 .form-input:-ms-input-placeholder {
@@ -1189,8 +1185,8 @@ textarea.form-input.input-sm {
 }
 
 .input-group {
-  display: flex; 
   display: -ms-flexbox;
+  display: flex;
 }
 
 .input-group .input-group-addon {
@@ -1260,8 +1256,8 @@ textarea.form-input.input-sm {
 }
 
 .input-group.input-inline {
-  display: inline-flex; 
   display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .has-success .form-input,
@@ -1329,13 +1325,26 @@ textarea.form-input.input-sm {
   border-color: #e85600;
 }
 
+.form-input:not(:-ms-input-placeholder):invalid {
+  border-color: #e85600;
+}
+
 .form-input:not(:placeholder-shown):invalid {
   border-color: #e85600;
+}
+
+.form-input:not(:-ms-input-placeholder):invalid:focus {
+  background: #fffaf7; 
+  box-shadow: 0 0 0 .1rem rgba(232, 86, 0, .2);
 }
 
 .form-input:not(:placeholder-shown):invalid:focus {
   background: #fffaf7; 
   box-shadow: 0 0 0 .1rem rgba(232, 86, 0, .2);
+}
+
+.form-input:not(:-ms-input-placeholder):invalid + .form-input-hint {
+  color: #e85600;
 }
 
 .form-input:not(:placeholder-shown):invalid + .form-input-hint {
@@ -1372,8 +1381,8 @@ input.disabled + .form-icon {
 }
 
 .form-horizontal .form-group {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -1559,31 +1568,36 @@ video.video-responsive::before {
   display: none !important;
 }
 
+.cols,
 .columns {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -.4rem;
   margin-right: -.4rem;
 }
 
+.cols.col-gapless,
 .columns.col-gapless {
   margin-left: 0;
   margin-right: 0;
 }
 
+.cols.col-gapless > .column,
 .columns.col-gapless > .column {
   padding-left: 0;
   padding-right: 0;
 }
 
+.cols.col-oneline,
 .columns.col-oneline {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   overflow-x: auto;
 }
 
+[class~="col-"],
 .column {
   -ms-flex: 1;
   flex: 1;
@@ -1592,6 +1606,19 @@ video.video-responsive::before {
   padding-right: .4rem;
 }
 
+[class~="col-"].col-12,
+[class~="col-"].col-11,
+[class~="col-"].col-10,
+[class~="col-"].col-9,
+[class~="col-"].col-8,
+[class~="col-"].col-7,
+[class~="col-"].col-6,
+[class~="col-"].col-5,
+[class~="col-"].col-4,
+[class~="col-"].col-3,
+[class~="col-"].col-2,
+[class~="col-"].col-1,
+[class~="col-"].col-auto,
 .column.col-12,
 .column.col-11,
 .column.col-10,
@@ -1998,8 +2025,8 @@ video.video-responsive::before {
 }
 
 .hero {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   -ms-flex-pack: justify;
@@ -2024,8 +2051,8 @@ video.video-responsive::before {
 
 .navbar {
   align-items: stretch;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: stretch;
   -ms-flex-pack: justify;
   -ms-flex-wrap: wrap;
@@ -2035,8 +2062,8 @@ video.video-responsive::before {
 
 .navbar .navbar-section {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex: 1 0 0;
   flex: 1 0 0; 
   -ms-flex-align: center;
@@ -2049,8 +2076,8 @@ video.video-responsive::before {
 
 .navbar .navbar-center {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto; 
   -ms-flex-align: center;
@@ -2061,8 +2088,8 @@ video.video-responsive::before {
   text-decoration: none;
 }
 
-.accordion input:checked ~ .accordion-header .icon,
-.accordion[open] .accordion-header .icon {
+.accordion input:checked ~ .accordion-header > .icon:first-child,
+.accordion[open] .accordion-header > .icon:first-child {
   transform: rotate(90deg);
 }
 
@@ -2261,8 +2288,8 @@ summary.accordion-header::-webkit-details-marker {
 .bar {
   background: #eef0f3;
   border-radius: .1rem;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   height: .8rem;
@@ -2337,8 +2364,8 @@ summary.accordion-header::-webkit-details-marker {
   background: #fff;
   border: .05rem solid #dadee4;
   border-radius: .1rem;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -2383,8 +2410,8 @@ summary.accordion-header::-webkit-details-marker {
   align-items: center;
   background: #eef0f3;
   border-radius: 5rem;
-  display: inline-flex;
   display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-align: center;
   font-size: 90%;
   height: 1.2rem;
@@ -2523,8 +2550,8 @@ summary.accordion-header::-webkit-details-marker {
 
 .menu .menu-badge {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   height: 100%;
   position: absolute;
@@ -2554,8 +2581,8 @@ summary.accordion-header::-webkit-details-marker {
 
 .modal:target,
 .modal.active {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   opacity: 1;
   z-index: 400;
 }
@@ -2596,8 +2623,8 @@ summary.accordion-header::-webkit-details-marker {
   background: #fff;
   border-radius: .1rem;
   box-shadow: 0 .2rem .5rem rgba(48, 55, 66, .3);
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   max-height: 75vh;
@@ -2627,8 +2654,8 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .nav {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   list-style: none;
@@ -2662,8 +2689,8 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .pagination {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   list-style: none;
   margin: .2rem 0;
   padding: .2rem 0;
@@ -2723,8 +2750,8 @@ summary.accordion-header::-webkit-details-marker {
 .panel {
   border: .05rem solid #dadee4;
   border-radius: .1rem;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -2808,8 +2835,8 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .step {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   list-style: none;
@@ -2878,8 +2905,8 @@ summary.accordion-header::-webkit-details-marker {
 .tab {
   align-items: center;
   border-bottom: .05rem solid #dadee4;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -2945,8 +2972,8 @@ summary.accordion-header::-webkit-details-marker {
 .tile {
   align-content: space-between;
   align-items: flex-start;
-  display: flex; 
   display: -ms-flexbox;
+  display: flex; 
   -ms-flex-align: start;
   -ms-flex-line-pack: justify;
 }
@@ -3308,13 +3335,13 @@ a.text-error:visited {
 }
 
 .d-flex {
-  display: flex; 
   display: -ms-flexbox;
+  display: flex;
 }
 
 .d-inline-flex {
-  display: inline-flex; 
   display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .d-none,
@@ -3410,6 +3437,7 @@ a.text-error:visited {
 
 .loading::after {
   animation: loading 500ms infinite linear;
+  background: transparent;
   border: .1rem solid #5755d9;
   border-radius: 50%;
   border-right-color: transparent;
@@ -3420,6 +3448,8 @@ a.text-error:visited {
   left: 50%;
   margin-left: -.4rem;
   margin-top: -.4rem;
+  opacity: 1;
+  padding: 0;
   position: absolute;
   top: 50%;
   width: .8rem;
@@ -3464,8 +3494,8 @@ a.text-error:visited {
 }
 
 .p-sticky {
-  position: sticky !important; 
   position: -webkit-sticky !important;
+  position: sticky !important;
 }
 
 .p-centered {
@@ -3477,8 +3507,8 @@ a.text-error:visited {
 
 .flex-centered {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -3716,6 +3746,18 @@ a.text-error:visited {
   font-size: 1.2em;
 }
 
+.text-small {
+  font-size: .9em;
+}
+
+.text-tiny {
+  font-size: .8em;
+}
+
+.text-muted {
+  opacity: .8;
+}
+
 .text-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3735,6 +3777,4 @@ a.text-error:visited {
   word-break: break-word;
   word-wrap: break-word;
 }
-
 `;
-export default styles;

@@ -16,16 +16,16 @@
 
 import { css } from 'lit-element';
 
-const styles = css`
-/*! Spectre.css Experimentals v0.5.8 | MIT License | github.com/picturepan2/spectre */
+export const styles = css`
+/*! Spectre.css Experimentals v0.5.9 | MIT License | github.com/picturepan2/spectre */
 .form-autocomplete {
   position: relative;
 }
 
 .form-autocomplete .form-autocomplete-input {
   align-content: flex-start;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-line-pack: start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -81,8 +81,8 @@ const styles = css`
   background: #f7f8f9;
   border-top-left-radius: .1rem;
   border-top-right-radius: .1rem;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   font-size: .9rem;
   padding: .4rem;
@@ -90,8 +90,8 @@ const styles = css`
 
 .calendar .calendar-header,
 .calendar .calendar-:host {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-pack: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -234,8 +234,8 @@ const styles = css`
 .calendar.calendar-lg .calendar-body .calendar-date {
   border-bottom: .05rem solid #dadee4;
   border-right: .05rem solid #dadee4;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   height: 5.5rem;
@@ -375,8 +375,8 @@ const styles = css`
 
 .carousel .carousel-nav {
   bottom: .4rem;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-pack: center;
   justify-content: center;
   left: 50%;
@@ -488,6 +488,7 @@ const styles = css`
   color: #fff;
   content: "";
   height: 3px;
+  pointer-events: none;
   position: absolute;
   right: .4rem;
   top: 50%;
@@ -574,8 +575,8 @@ const styles = css`
 }
 
 .filter .filter-:host {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -639,8 +640,8 @@ const styles = css`
 }
 
 .off-canvas {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-flow: nowrap;
   flex-flow: nowrap;
   height: 100%;
@@ -746,8 +747,8 @@ const styles = css`
 .parallax .parallax-front {
   align-items: center;
   color: #fff;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   -ms-flex-pack: center;
   height: 100%;
@@ -935,6 +936,7 @@ const styles = css`
   border-radius: 50%;
   height: .6rem;
   margin-top: -.25rem;
+  -webkit-transition: transform .2s;
   transition: transform .2s;
   width: .6rem;
 }
@@ -944,6 +946,7 @@ const styles = css`
   border: 0;
   border-radius: 50%;
   height: .6rem;
+  -moz-transition: transform .2s;
   transition: transform .2s;
   width: .6rem;
 }
@@ -953,6 +956,7 @@ const styles = css`
   border: 0;
   border-radius: 50%;
   height: .6rem;
+  -ms-transition: transform .2s;
   transition: transform .2s;
   width: .6rem;
 }
@@ -1013,8 +1017,8 @@ const styles = css`
 }
 
 .timeline .timeline-item {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   margin-bottom: 1.2rem;
   position: relative;
 }
@@ -1077,8 +1081,8 @@ const styles = css`
 
 .viewer-360 {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1244,6 +1248,4 @@ const styles = css`
   max-width: 100%;
   order: 1;
 }
-
 `;
-export default styles;

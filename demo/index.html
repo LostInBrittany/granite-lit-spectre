@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-    <title>granite-alert demo</title>
+    <title>granite-lit-spectre demo</title>
 
     <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
@@ -37,30 +37,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     </script>
     <!--<script type="module" src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>-->
-
-
-
-    <script type="module" src="./granite-spectre-example.js"></script>
-
-    <script type="module">
-      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
-      import '@polymer/iron-demo-helpers/demo-snippet';
-    </script>
-
-
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles">
-      </style>
-    </custom-style>
   </head>
   <body>
     <div class="vertical-section-container centered">
-      <h3>Basic granite-spectre demo</h3>
-      <demo-snippet>
-        <template>
-          <granite-spectre-example></granite-spectre-example>
-        </template>
-      </demo-snippet>
+      <h3>granite-lit-spectre</h3>
+      <div id="demo1"></div>
     </div>
+    <script type="module">
+      import { html, render } from 'lit-html';
+      import './granite-spectre-example.js';
+      
+      render(
+        html`
+          <p>Here you have an example of a table rendered using Spectre.css:</p>
+          
+          <granite-spectre-example></granite-spectre-example>
+        `,
+        document.querySelector('#demo1')
+      );
+    </script>    
   </body>
 </html>
