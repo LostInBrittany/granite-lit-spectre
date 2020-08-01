@@ -3,13 +3,6 @@
 *granite-lit-spectre* is a wrapping of [Spectre CSS](https://picturepan2.github.io/spectre/) CSS as [LitElement](https://lit-element.polymer-project.org/) [lit-html CSS TemplateResult](https://lit-element.polymer-project.org/guide/styles) to be used in LitElement web components.
 
 
-
-## Doc & demo
-
-[https://lostinbrittany.github.io/granite-lit-spectre](https://lostinbrittany.github.io/granite-lit-spectre)
-
-
-
 ### Using `granite-lit-spectre`
 
 To use *granite-lit-spectre* in an element:
@@ -33,7 +26,7 @@ Once installed, import it in your application. Usually you will simply want to i
 Supossing you want to import `granite-lit-spectre.js`:
  
 ```
-import spectreStyle from '@granite-elements/granite-lit-spectre/granite-lit-spectre.js';
+import {spectreStyles} from '@granite-elements/granite-lit-spectre/granite-lit-spectre.js';
 ``` 
 
 #### 3. Inside your component, use *granite-lit-spectre* in the static `styles` property
@@ -43,7 +36,7 @@ import spectreStyle from '@granite-elements/granite-lit-spectre/granite-lit-spec
 
 class GraniteSpectreExample extends LitElement {
   static get styles() {
-    return spectreStyle;
+    return [spectreStyles];
   }
   render() {
     return html`
@@ -57,11 +50,11 @@ class GraniteSpectreExample extends LitElement {
 
 ```js
 import { html, LitElement } from 'lit-element';
-import {styles} from '../granite-lit-spectre.js';
+import {spectreStyles} from '../granite-lit-spectre.js';
 
 class GraniteSpectreExample extends LitElement {
   static get styles() {
-    return [styles];
+    return [spectreStyles];
   }
   render() {
     return html`

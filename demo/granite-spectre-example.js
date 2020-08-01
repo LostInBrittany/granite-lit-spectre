@@ -1,10 +1,9 @@
 import { html, LitElement } from 'lit-element';
-import {styles} from '../granite-lit-spectre.js';
+import {spectreStyles} from '../granite-lit-spectre.js';
 
 class GraniteSpectreExample extends LitElement {
   static get styles() {
-    console.log(`FUCK ${styles}`);
-    return [styles] ;
+    return [spectreStyles] ;
   }
   render() {
     return html`
