@@ -1,7 +1,7 @@
   
 /**
 @license Apache 2.0
-Copyright (c) 2020 Horacio "LostInBrittany" Gonzalez for the style module encapsulation of CSS files
+Copyright (c) 2021 Horacio "LostInBrittany" Gonzalez for the style module encapsulation of CSS files
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -14,7 +14,7 @@ limitations under the License.
 @demo demo/index.html
 */
 
-import { css } from 'lit-element';
+import { css } from 'lit';
 
 export const spectreStyles = css`
 /*! Spectre.css Experimentals v0.5.9 | MIT License | github.com/picturepan2/spectre */

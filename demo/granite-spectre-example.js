@@ -1,4 +1,4 @@
-import { html, LitElement } from 'lit-element';
+import { html, LitElement } from 'lit';
 import {spectreStyles} from '../granite-lit-spectre.js';
 
 class GraniteSpectreExample extends LitElement {
